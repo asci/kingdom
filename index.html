@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>The Game</title>
+<meta charset="utf-8">
+	<link rel="stylesheet" href="./css/style.css">		
+	<script src="./js/libs/jquery-1.8.2.min.js"></script>
+	<script src="./js/libs/underscore-min.js"></script>
+	<script src="./js/libs/astar.js"></script>
+	<script src="./js/libs/stats.min.js"></script>
+	<script src="./js/libs/greensock/TweenMax.min.js"></script>
+	<script src="./js/framework/framework.js"></script>
+	<script src="./data/json.js"></script>
+	<script src="./js/game/tiles.js"></script>
+	<script src="./js/game/units.js"></script>
+	<script src="./js/game/drop.js"></script>
+	<script src="./js/game/field.js"></script>
+	<script src="./js/game/game.js"></script>
+</head>
+<body>
+	<div id="top">
+		<p>Displayed objects </p><p id="displayed">0</p>
+		<p>Items </p><p id="items">0</p>
+		<p>FPS </p><p id="fps">0</p>
+	</div>
+	<div id="center">
+		<canvas id="game"> </canvas>
+	</div>
+	<div id="shop">
+		<h1>Shop!</h1>
+		<p> Thera our shop...</p>
+		<button id="humanHouse" name="humanHouse"><img width="72px" src="./images/sprites/humanHouse.png"/> <br />Human house</button>
+		<button id="elvenHouse" name="elvenHouse"><img width="72px" src="./images/sprites/elvenHouse.png"/> <br />Elven house</button>
+		<button id="dwarvenHouse" name="dwarvenHouse"><img width="72px" src="./images/sprites/dwarvenHouse.png"/> <br />Dwarven house</button>
+		<button id="altar" name="altar"><img width="72px" src="./images/sprites/altar1.png"/> <br />Altar Of Magic</button>
+		<button id="barracks" name="barracks"><img width="72px" src="./images/sprites/barracks.png"/> <br />Barracks</button>
+		<br /><button class="close" name="close">Okay</button>
+	</div>
+	<div id="bottom">
+		<button id="shopBtn" name="shopBtn">Shop</button>
+		<button id="zoomin" name="zoomin">Zoom in</button>
+		<button id="zoomout" name="zoomout">Zoom out</button>
+		<button id="open_map" name="open_map">Open map</button>
+	</div>
+	<div id="buyEnery">
+		<p> Not enough energy...</p>
+		<button id="buyEnergyBtn" name="buyEnergyBtn">Buy more energy!</button>
+		<button class="close" name="close">Okay</button>
+	</div>
+	<div id="oncanvas">
+		<p> Train new units</p>
+		<button id="normal" name="normal">Train normal</button>
+		<button id="express" name="express">Train express</button>
+		<button id="instant" name="instant">Instant train!</button>
+		<button class="close" name="close">Okay</button>
+	</div>
+	<div id="right">
+		<p id="info"></p>
+	</div>
+</body>
+</html>
