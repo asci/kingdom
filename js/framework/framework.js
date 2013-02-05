@@ -1,3 +1,5 @@
+//asci@yandex.ru
+//base framework for kingdom game
 (function () {
 	window.dem = {};
 	window.app = {};
