@@ -36,7 +36,7 @@
 	dem.Gold = (function  () {
 		var mask = {},
 		gold = new Image();
-		gold.src = "/images/sprites/gold.png";
+		gold.src = "images/sprites/gold.png";
 
 		var Gold = function (x, y) {
 			dem.FieldDrop.apply(this, [x, y, gold, mask]);
@@ -56,7 +56,7 @@
 	dem.Book = (function  () {
 		var mask = {},
 		book = new Image();
-		book.src = "/images/sprites/book.png";
+		book.src = "images/sprites/book.png";
 
 		var Book = function (x, y) {
 			dem.FieldDrop.apply(this, [x, y, book, mask]);

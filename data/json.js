@@ -4,9 +4,9 @@
 	dem.storage.images = {};
 
 	dem.storage.animations.windmill  = new Image();
-	dem.storage.animations.windmill.src = "/images/sprites/windmill.png";
+	dem.storage.animations.windmill.src = "images/sprites/windmill.png";
 	dem.storage.images.tilemap = new Image();
-	dem.storage.images.tilemap.src = "/images/tiles/tiles.png";
+	dem.storage.images.tilemap.src = "images/tiles/tiles.png";
 
 	dem.storage.buildingsInfo = {
 		"humanHouse": {
