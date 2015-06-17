@@ -19,23 +19,21 @@ $(function(){
 			stats,
 			me;
 
-		var Game = function (id, w, h) {
+		function Game(id, w, h) {
 			if (instance) {
 				return instance;
 			} else {
 				instance = this;
 			}
-			width = w;
-			height = h;
-			Object.defineProperty(this, 'width', {get: function () {return width}, set: function (val) {console.log('Read only property!'); return null}});
-			Object.defineProperty(this, 'height', {get: function () {return height}, set: function (val) {console.log('Read only property!'); return null}});
+    		this.width = w,
+			this.height = h;
 			canvas = document.getElementById('game');
-			canvas.width = width;
- 			canvas.height = height;
+			canvas.width =this. width;
+ 			canvas.height = this.height;
 			canvasCtx = canvas.getContext("2d"); 		
 			buffer = document.createElement("canvas");
-			buffer.width = width;
-			buffer.height = height;
+			buffer.width = this.width;
+			buffer.height = this.height;
 			ctx = buffer.getContext('2d');
 			me = this;
 			this.zoom = 1.0;
@@ -61,7 +59,7 @@ $(function(){
 			$('#game').mousemove(function (e){
 				e.x = e.clientX - this.offsetLeft;
 				e.y = e.clientY - this.offsetTop;
-				field.onmousemove(e, width, height, me.zoom);
+				field.onmousemove(e, me.width, me.height, me.zoom);
 			});
 			
 			$('#game').mousedown(function (e) {
@@ -88,17 +86,15 @@ $(function(){
 
 		Game.prototype.render = function  () {
 			stats.begin();
-			ctx.save();
-			ctx.scale(me.zoom, me.zoom);
+			canvasCtx.save();
+			canvasCtx.scale(me.zoom, me.zoom);
 
-			field.draw(ctx, width, height, me.zoom);
+			field.draw(canvasCtx, me.width, me.height, me.zoom);
 
-			ctx.restore();
-			canvasCtx.drawImage(buffer, 0, 0);
+			canvasCtx.restore();
 			stats.end();
 
-			setTimeout(Game.prototype.render, 19);
-			//window.requestAnimationFrame(Game.prototype.render);
+			window.requestAnimationFrame(Game.prototype.render);
 		}
 
 		return Game;

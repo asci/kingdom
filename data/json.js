@@ -1,4 +1,5 @@
 (function () {
+    var dem = window.dem;
 	dem.storage = dem.storage || {};
 	dem.storage.animations = {};
 	dem.storage.images = {};
@@ -133,48 +134,5 @@
 		}
 	};
 	dem.storage.userCharacters = [
-	// {
-	// 	"id": 0,
-	// 	"hp": 100,
-	// 	"map_x": 1,
-	// 	"map_y": 2,
-	// 	"infoName": "fencer",
-	// 	"owner": "player"
-	// }, {
-	// 	"id": 1,
-	// 	"hp": 90,
-	// 	"map_x": 4,
-	// 	"map_y": 4,
-	// 	"infoName": "grunt",
-	// 	"owner": "enemy"
-	// }, {
-	// 	"id": 2,
-	// 	"hp": 60,
-	// 	"map_x": 5,
-	// 	"map_y": 3,
-	// 	"infoName": "skeleton",
-	// 	"owner": "enemy"
-	// }, {
-	// 	"id": 0,
-	// 	"hp": 100,
-	// 	"map_x": 1,
-	// 	"map_y": 3,
-	// 	"infoName": "fencer",
-	// 	"owner": "player"
-	// }, {
-	// 	"id": 1,
-	// 	"hp": 90,
-	// 	"map_x": 3,
-	// 	"map_y": 4,
-	// 	"infoName": "grunt",
-	// 	"owner": "enemy"
-	// }, {
-	// 	"id": 2,
-	// 	"hp": 60,
-	// 	"map_x": 6,
-	// 	"map_y": 4,
-	// 	"infoName": "skeleton",
-	// 	"owner": "enemy"
-	// }
 	];
 }());
